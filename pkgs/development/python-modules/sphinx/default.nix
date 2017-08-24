@@ -25,10 +25,10 @@
 buildPythonPackage rec {
   name = "${pname}-${version}";
   pname = "Sphinx";
-  version = "1.5.2";
+  version = "1.6.3";
   src = fetchPypi {
     inherit pname version;
-    sha256 = "049c48393909e4704a6ed4de76fd39c8622e165414660bfb767e981e7931c722";
+    sha256 = "af8bdb8c714552b77d01d4536e3d6d2879d6cb9d25423d29163d5788e27046e6";
   };
   LC_ALL = "en_US.UTF-8";
   buildInputs = [ pytest simplejson mock glibcLocales html5lib ] ++ lib.optional (pythonOlder "3.4") enum34;
